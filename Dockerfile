@@ -9,8 +9,7 @@ LABEL "com.github.actions.description"="Deploy a Worker with the CF CLI"
 LABEL "com.github.actions.icon"="cloud"
 LABEL "com.github.actions.color"="orange"
 
-RUN go build -o main \
-&& go get -u github.com/ejcx/cf
+RUN go get -u github.com/ejcx/cf
 
 COPY ./entrypoint.sh /entrypoint.sh
 
