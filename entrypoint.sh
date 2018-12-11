@@ -1,9 +1,3 @@
 #!/bin/sh
 
-echo 'hello world'
-
-ls
-
-cd ..
-
-ls
+echo "hello world"
