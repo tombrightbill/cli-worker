@@ -9,7 +9,8 @@ LABEL "com.github.actions.description"="Deploy a Worker with the CF CLI"
 LABEL "com.github.actions.icon"="cloud"
 LABEL "com.github.actions.color"="orange"
 
-RUN curl -L https://github.com/ejcx/cf/releases/download/1.0.0/cf-linux > cf
+RUN apk add --no-cache curl \
+    && curl -L https://github.com/ejcx/cf/releases/download/1.0.0/cf-linux > cf
 
 COPY ./entrypoint.sh /entrypoint.sh
 
