@@ -9,7 +9,8 @@ LABEL "com.github.actions.description"="Deploy a Worker with the CF CLI"
 LABEL "com.github.actions.icon"="cloud"
 LABEL "com.github.actions.color"="orange"
 
-RUN  go get -u github.com/ejcx/cf
+RUN  pkg-config --cflags --libs /usr/local/Cellar/libusb/1.0.20/lib/pkgconfig/libusb-1.0.pc \
+&& go get -u github.com/ejcx/cf
 
 COPY ./entrypoint.sh /entrypoint.sh
 
