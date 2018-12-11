@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:alpine
 
 LABEL "maintainer"="tombrightbill <tombrightbill@gmail.com>"
 LABEL "repository"="https://github.com/tombrightbill/cli-worker"
@@ -9,7 +9,7 @@ LABEL "com.github.actions.description"="Deploy a Worker with the CF CLI"
 LABEL "com.github.actions.icon"="cloud"
 LABEL "com.github.actions.color"="orange"
 
-RUN  pkg-config --cflags --libs /usr/local/Cellar/libusb/1.0.20/lib/pkgconfig/libusb-1.0.pc \
+RUN go build -o main \
 && go get -u github.com/ejcx/cf
 
 COPY ./entrypoint.sh /entrypoint.sh
