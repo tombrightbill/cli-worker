@@ -10,7 +10,7 @@ LABEL "com.github.actions.icon"="cloud"
 LABEL "com.github.actions.color"="orange"
 
 RUN apk add --no-cache curl \
-    && curl -L -k https://github.com/ejcx/cf/releases/download/1.0.0/cf-linux 
+    && curl -vvv -L https://github.com/ejcx/cf/releases/download/1.0.0/cf-linux > cf 
 
 ADD entrypoint.sh /entrypoint.sh
 
