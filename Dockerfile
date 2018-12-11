@@ -1,4 +1,4 @@
-FROM golang:alpine:latest
+FROM golang:alpine
 
 LABEL "maintainer"="tombrightbill <tombrightbill@gmail.com>"
 LABEL "repository"="https://github.com/tombrightbill/cli-worker"
