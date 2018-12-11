@@ -1,7 +1,3 @@
 #!/bin/sh
-echo $CF_API_KEY
-echo $ZONE
-echo $CF_API_EMAIL
-cat $SCRIPT
-ls
-cf
+
+cf worker upload-worker --zone-id $ZONE --script @$SCRIPT
