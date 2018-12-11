@@ -9,7 +9,7 @@ LABEL "com.github.actions.description"="Deploy a Worker with the CF CLI"
 LABEL "com.github.actions.icon"="cloud"
 LABEL "com.github.actions.color"="orange"
 
-RUN apk install git --no-cache \
+RUN apk install git -no-cache \
     && go get -u github.com/ejcx/cf
 
 COPY ./entrypoint.sh /entrypoint.sh
