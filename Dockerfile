@@ -12,6 +12,6 @@ LABEL "com.github.actions.color"="orange"
 RUN apk add --no-cache curl \
     && curl -L https://github.com/ejcx/cf/releases/download/1.0.0/cf-linux > cf
 
-COPY ./entrypoint.sh /entrypoint.sh
+ADD entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
